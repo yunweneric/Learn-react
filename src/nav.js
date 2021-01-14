@@ -3,13 +3,18 @@ import "./App.css";
 
 class Nav extends Component{
   render(){
-    const {name, age, gender} = this.props
+    const {content} = this.props;
+    const datalist = content.map(data =>{
+      return(
+        <div className="data">
+          <p>{data.name}</p>
+        </div>
+      )
+    })
     return(
       <div>
         <h1>Nav Bar</h1>
-        <p>{name}</p>
-        <p>{age}</p>
-        <p>{gender}</p>
+        
       </div>
     )
   }
