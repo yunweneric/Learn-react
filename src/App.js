@@ -2,10 +2,11 @@ import "./App.css";
 import Nav from "./nav";
 
 function App() {
+  
   return (
     <div className="App">
       <div>
-      <Nav/>
+      <Nav name="Eric" age = "22" gender ="male"/>
 
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui

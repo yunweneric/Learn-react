@@ -1,13 +1,17 @@
+import { Component } from "react";
 import "./App.css";
 
-function Nav() {
-  return (
-    <div>
+class Nav extends Component{
+  render(){
+    const {name, age, gender} = this.props
+    return(
       <div>
-        <h2> Nav bar</h2>
+        <h1>Nav Bar</h1>
+        <p>{name}</p>
+        <p>{age}</p>
+        <p>{gender}</p>
       </div>
-    </div>
-  );
+    )
+  }
 }
-
 export default Nav;
