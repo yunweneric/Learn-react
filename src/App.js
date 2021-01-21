@@ -3,24 +3,6 @@ import Nav from "./nav";
 import Form from "./forms";
 import "./App.css";
 import Adddata from "./add-data";
-
-// function App(){
-//   return (
-//     <div className="App">
-//       <div>aduino
-//       <Nav/>
-//         <p>
-//           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
-//           veritatis sed provident repudiandae, earum officiis voluptatem,
-//           aspernatur pariatur tempore ducimus error alias beatae itaque rem sit
-//           nisi magnam deserunt culpa.
-//         </p>
-//         <Form/>
-//       </div>
-//     </div>
-//   );
-// }
-
 class App extends Component {
   state = {
     data: [
@@ -31,17 +13,25 @@ class App extends Component {
     ],
   };
   Adddata = (data) => {
-    console.log(data);
     let finaledata = [...this.state.data, data]
     data.id = Math.random()
     this.setState({
       data: finaledata
     })
   };
+  DeleteData = (id) =>{
+    // console.log(id);
+    let newdata = this.state.data.filter((data) =>{
+      return data.id !==id;
+    })
+    this.setState({
+      data: newdata
+    })
+  };
   render() {
     return (
       <div>
-        <Nav ninja={this.state.data} />
+        <Nav  DeleteData = {this.DeleteData} alldata= {this.state.data}  />
         <Form Adddata={this.Adddata} />
         <Adddata />
       </div>

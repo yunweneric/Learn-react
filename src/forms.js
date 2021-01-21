@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Nav from './nav'
 
 class Form extends Component{
     state ={
@@ -14,7 +13,6 @@ class Form extends Component{
     }
     handleSubmit = (e)=>{
         e.preventDefault();
-        // console.log(this.state);
         this.props.Adddata(this.state);
     }
     render(){
