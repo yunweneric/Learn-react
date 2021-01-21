@@ -49,7 +49,7 @@ const Nav = ({alldata, DeleteData}) => {
         <p>Name: {data.age}</p>
         <p>Name: {data.gender}</p>
         <p>Name: {data.id}</p>
-        <button onClick = {() => {DeleteData(data.id)}}>Delete data</button>
+        <button className='btn btn-success' onClick = {() => {DeleteData(data.id)}}>Delete data</button>
       </div>
       ) : null;
     });
